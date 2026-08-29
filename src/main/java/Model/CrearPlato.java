@@ -10,7 +10,6 @@ public class CrearPlato {
     private Long idRestaurante;
     private Boolean activo;
 
-    // CONSTRUCTOR: El orden debe coincidir exactamente con el Service
     public CrearPlato(Long id, String nombre, Integer precio, String descripcion, String urlImagen, String categoria, Long idRestaurante) {
         this.id = id;
         this.nombre = nombre;
