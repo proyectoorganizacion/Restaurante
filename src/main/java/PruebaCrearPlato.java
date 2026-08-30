@@ -16,7 +16,6 @@ import java.util.Scanner;
             System.out.print("Ingrese su Rol (ej. PROPIETARIO): ");
             String rolUsuario = scanner.nextLine();
 
-            // Asignación automática del ID
             Long id = contadorId++;
 
             System.out.print("Ingrese el Nombre del plato: ");
@@ -38,16 +37,15 @@ import java.util.Scanner;
             Long idRestaurante = Long.parseLong(scanner.nextLine());
 
             CrearPlato platoCreado = service.crearPlato(
-                    rolUsuario, id, nombre, precio, descripcion, urlImagen, categoria, idRestaurante
-            );
+                    rolUsuario, id, nombre, precio, descripcion, urlImagen, categoria, idRestaurante);
 
-            System.out.println("\n✅ ¡Plato registrado exitosamente con el ID asignado " + id + "!");
+            System.out.println("\n ¡Plato registrado exitosamente con el ID asignado " + id + "!");
             System.out.println(platoCreado);
 
         } catch (NumberFormatException e) {
-            System.out.println("\n❌ Error: El precio y el ID del restaurante deben ser números enteros.");
+            System.out.println("\n El precio y el ID del restaurante deben ser números enteros.");
         } catch (IllegalArgumentException e) {
-            System.out.println("\n❌ Error de validación: " + e.getMessage());
+            System.out.println("\n Error de validación: " + e.getMessage());
         } finally {
             scanner.close();
         }
