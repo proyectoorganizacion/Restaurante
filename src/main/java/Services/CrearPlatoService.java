@@ -37,4 +37,12 @@ public class CrearPlatoService {
 
         return nuevoPlato;
     }
+//    modificarPlaro
+public void modificarPlato(Long idPlato, Integer nuevoPrecio, String nuevaDescripcion, Long idRestauranteUsuario) throws Exception {
+    CrearPlato plato = crearPlatoRepository.buscarPorId(idPlato)
+            .orElseThrow(() -> new Exception("El plato con ID " + idPlato + " no existe."));
+
+    // Llama al método que definimos previamente en la entidad CrearPlato
+    plato.modificarPlato(nuevoPrecio, nuevaDescripcion, idRestauranteUsuario);
+}
 }

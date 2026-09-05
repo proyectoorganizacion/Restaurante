@@ -97,8 +97,27 @@ public class CrearPlato {
                 ", idRestaurante=" + idRestaurante +
                 ", activo=" + activo +
                 '}';
+    }       /**
+     * Modifica el precio y la descripción del plato.
+     *
+     * @param nuevoPrecio   Nuevo precio a asignar.
+     * @param nuevaDescripcion  Nueva descripción a asignar.
+     * @param idRestauranteUsuario ID del restaurante del usuario que intenta realizar la modificación.
+     * @throws IllegalArgumentException Si el ID del restaurante no coincide con el del plato.
+     */
+    public void modificarPlato(Integer nuevoPrecio, String nuevaDescripcion, Long idRestauranteUsuario) {
+        if (!this.idRestaurante.equals(idRestauranteUsuario)) {
+            throw new IllegalArgumentException("No tienes permiso para modificar un plato de otro restaurante.");
+        }
+
+        if (nuevoPrecio != null && nuevoPrecio > 0) {
+            this.precio = nuevoPrecio;
+        }
+
+        if (nuevaDescripcion != null && !nuevaDescripcion.trim().isEmpty()) {
+            this.descripcion = nuevaDescripcion;
+        }
     }
 }
-
 
 
