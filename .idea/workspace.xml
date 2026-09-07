@@ -5,26 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6af02dd2-0f5a-40bf-9dab-4f60d89b2d45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Views/RegistroPlato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/SesionUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/EmpleadoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Views/LoginView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Views/RegistroEmpleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/propietarios.iml" beforeDir="false" afterPath="$PROJECT_DIR$/propietarios.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/CrearPlato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CrearPlato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Restaurante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PruebaCrearPlato.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/CrearPlatoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/CrearPlatoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/PropietarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/PropietarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/RestauranteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/RestauranteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/RegistroPropietario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/RegistroPropietario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/RegistroRestaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/RegistroRestaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/RegistroPlato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/RegistroPlato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Model/CrearPlato.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/CrearPlato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PruebaCrearPlato.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Services/CrearPlatoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/CrearPlatoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Views/RegistroPropietario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/RegistroPropietario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/CrearPlatoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/CrearPlatoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/PropietarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/PropietarioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/RestauranteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/RestauranteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/RegistroPlato.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/RegistroPlato.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +53,12 @@
     &quot;assignee&quot;: &quot;lopezu59&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/proyectoorganizacion/Restaurante.git&quot;,
-    &quot;accountId&quot;: &quot;5c60263b-96f7-4988-954d-2f82cbd2a58f&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/proyectoorganizacion/Restaurante.git",
+    "accountId": "eac9fabd-03fc-4642-8375-66e8b96acfc1"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -139,6 +140,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -156,6 +158,7 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
       </set>
     </attachedChunks>
   </component>

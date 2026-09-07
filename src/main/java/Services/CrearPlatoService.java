@@ -1,6 +1,8 @@
 package Services;
 
 import Model.CrearPlato;
+import Model.Propietario;
+import Model.SesionUsuario;
 import repositories.CrearPlatoRepository;
 
 public class CrearPlatoService {
@@ -12,7 +14,12 @@ public class CrearPlatoService {
 
     public CrearPlato crearPlato(String rolUsuario, Long id, String nombre, Integer precio, String descripcion, String urlImagen, String categoria, String nitRestaurante) {
 
-        if (!"PROPIETARIO".equalsIgnoreCase(rolUsuario)) {
+        if (!SesionUsuario.getInstancia().estaAutenticado()) {
+            throw new IllegalArgumentException("Debe iniciar sesión para realizar esta acción.");
+        }
+
+        Propietario usuarioActual = SesionUsuario.getInstancia().getUsuarioAutenticado();
+        if (!"PROPIETARIO".equalsIgnoreCase(usuarioActual.getRole())) {
             throw new IllegalArgumentException("Solo el propietario del restaurante puede crear platos.");
         }
 
@@ -32,28 +39,36 @@ public class CrearPlatoService {
         }
 
         CrearPlato nuevoPlato = new CrearPlato(id, nombre, precio, descripcion, urlImagen, categoria, nitRestaurante);
-
         crearPlatoRepository.guardar(nuevoPlato);
 
         return nuevoPlato;
     }
-//    modificarPlaro
-public CrearPlato modificarPlato(
-        Long idPlato,
-        Integer nuevoPrecio,
-        String nuevaDescripcion,
-        String nitRestauranteUsuario) throws Exception {
 
-    CrearPlato plato = crearPlatoRepository.buscarPorId(idPlato)
-            .orElseThrow(() ->
-                    new Exception("El plato con ID " + idPlato + " no existe.")
-            );
+    public CrearPlato modificarPlato(
+            Long idPlato,
+            Integer nuevoPrecio,
+            String nuevaDescripcion,
+            String nitRestauranteUsuario) throws Exception {
 
-    plato.modificarPlato(
-            nuevoPrecio,
-            nuevaDescripcion,
-            nitRestauranteUsuario);
+        if (!SesionUsuario.getInstancia().estaAutenticado()) {
+            throw new Exception("Debe iniciar sesión para realizar esta acción.");
+        }
 
-    return plato;
-}
+        Propietario usuarioActual = SesionUsuario.getInstancia().getUsuarioAutenticado();
+        if (!"PROPIETARIO".equalsIgnoreCase(usuarioActual.getRole())) {
+            throw new Exception("Solo el propietario del restaurante puede modificar platos.");
+        }
+
+        CrearPlato plato = crearPlatoRepository.buscarPorId(idPlato)
+                .orElseThrow(() ->
+                        new Exception("El plato con ID " + idPlato + " no existe.")
+                );
+
+        plato.modificarPlato(
+                nuevoPrecio,
+                nuevaDescripcion,
+                nitRestauranteUsuario);
+
+        return plato;
+    }
 }
