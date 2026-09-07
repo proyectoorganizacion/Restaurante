@@ -1,16 +1,14 @@
-//Validaciones del proyecto y diferentes campos
 package Services;
 
 import Model.Propietario;
+import Model.SesionUsuario;
 import repositories.PropietarioRepository;
 
 import java.time.LocalDate;
 import java.time.Period;
-//libreriaBypass
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class PropietarioService {
-    //inyeccion de dependencias
     private PropietarioRepository propietarioRepository;
 
     public PropietarioService(PropietarioRepository propietarioRepository) {
@@ -19,29 +17,29 @@ public class PropietarioService {
 
     public void registrarPropietario(Propietario propietario){
 
+        if (!SesionUsuario.getInstancia().estaAutenticado()) {
+            throw new IllegalArgumentException("Debe iniciar sesión para realizar esta acción.");
+        }
+
+        Propietario usuarioActual = SesionUsuario.getInstancia().getUsuarioAutenticado();
+        if (!"ADMINISTRADOR".equalsIgnoreCase(usuarioActual.getRole())) {
+            throw new IllegalArgumentException("Acceso denegado: Solo el ADMINISTRADOR puede crear propietarios.");
+        }
+
         validarPropietario(propietario);
 
-        //Definimos el rol
         propietario.setRole("PROPIETARIO");
 
-        //Bypass logica
-        BCryptPasswordEncoder encoder =
-                new BCryptPasswordEncoder();
-
-        String passwordHash =
-                encoder.encode(propietario.getPassword());
-
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String passwordHash = encoder.encode(propietario.getPassword());
         propietario.setPassword(passwordHash);
 
         propietarioRepository.guardarPropietario(propietario);
-
-        System.out.println("Propietario registrado");
-
+        System.out.println("Propietario registrado exitosamente.");
     }
 
     private void validarPropietario(Propietario propietario){
 
-        //identificacion cc
         if (propietario.getIdentification().isBlank()) {
             throw new IllegalArgumentException("Identification is required");
         }
@@ -50,7 +48,6 @@ public class PropietarioService {
             throw new IllegalArgumentException("Identification must contain only numbers");
         }
 
-        //email y segunda capa de validacion de correo y proteccion de las reglas de negocio.
         if (propietario.getEmail().isBlank()) {
             throw new IllegalArgumentException("Email is required");
         }
@@ -59,7 +56,6 @@ public class PropietarioService {
             throw new IllegalArgumentException("Invalid email format");
         }
 
-        //Phone
         if (propietario.getPhone().isBlank()) {
             throw new IllegalArgumentException("Phone is required");
         }
@@ -68,12 +64,10 @@ public class PropietarioService {
             throw new IllegalArgumentException("Phone must contain a maximum of 13 characters");
         }
 
-        //El \\ y + indica que puede tener + pero es opcional
         if (!propietario.getPhone().matches("^\\+?\\d+$")) {
             throw new IllegalArgumentException(
                     "Phone must contain only numbers and an optional + at the beginning"
             );
-
         }
 
         if (propietario.getPassword().isBlank()) {
@@ -81,9 +75,7 @@ public class PropietarioService {
         }
 
         if (propietario.getBirthdate().isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException(
-                    "Birthdate cannot be in the future"
-            );
+            throw new IllegalArgumentException("Birthdate cannot be in the future");
         }
 
         if (Period.between(propietario.getBirthdate(), LocalDate.now()).getYears() < 18) {
