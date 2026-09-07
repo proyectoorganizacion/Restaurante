@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6af02dd2-0f5a-40bf-9dab-4f60d89b2d45" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Views/RegistroPlato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/CrearPlato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CrearPlato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PruebaCrearPlato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/CrearPlatoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/CrearPlatoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/RestauranteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/RestauranteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/RegistroPropietario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/RegistroPropietario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/RegistroRestaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/RegistroRestaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Model/CrearPlato.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/CrearPlato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PruebaCrearPlato.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/CrearPlatoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/CrearPlatoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/RegistroPropietario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/RegistroPropietario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/CrearPlatoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/CrearPlatoRepository.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lopezu59&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/proyectoorganizacion/Restaurante.git&quot;,
+    &quot;accountId&quot;: &quot;5c60263b-96f7-4988-954d-2f82cbd2a58f&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0134150920580145" />
+      <entry key="MS500" value="1.4582113854584162" />
+      <entry key="S2" value="2.742716425888747" />
+      <entry key="S5" value="4.063683713340977" />
+      <entry key="S10" value="4.865990205687233" />
+      <entry key="S30" value="5.57647424480161" />
+      <entry key="S60" value="5.785761766706333" />
+      <entry key="M2" value="5.963903178845414" />
+      <entry key="M5" value="6.626264674718507" />
+      <entry key="M10" value="7.803174769882681" />
+      <entry key="M15" value="9.302090517923924" />
+      <entry key="M30" value="16.409871719605157" />
+      <entry key="H1" value="33.95578287504591" />
+      <entry key="H2" value="62.227628378684166" />
+      <entry key="H4" value="91.75992203428729" />
+      <entry key="D1" value="133.00459428039733" />
+      <entry key="W1" value="142.3603689571989" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="2.8895593816401086E-16" />
+      <entry key="MS500" value="7.801288246573709E-4" />
+      <entry key="S2" value="0.16712506192564175" />
+      <entry key="S5" value="0.4888961671306791" />
+      <entry key="S10" value="0.6992112058788195" />
+      <entry key="S30" value="0.8922498107186503" />
+      <entry key="S60" value="1.0105162958371736" />
+      <entry key="M2" value="1.2321701732046375" />
+      <entry key="M5" value="1.573129923474909" />
+      <entry key="M10" value="1.7823660255855276" />
+      <entry key="M15" value="1.9609043132923842" />
+      <entry key="M30" value="2.8561847416452184" />
+      <entry key="H1" value="6.321217501507957" />
+      <entry key="H2" value="13.965317177525652" />
+      <entry key="H4" value="23.00292517085453" />
+      <entry key="D1" value="36.35894876763655" />
+      <entry key="W1" value="39.45548133329555" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.3056662240749015" />
+      <entry key="MS500" value="0.9032492761322823" />
+      <entry key="S2" value="2.4674788109574317" />
+      <entry key="S5" value="4.268020609067761" />
+      <entry key="S10" value="5.391508189330486" />
+      <entry key="S30" value="6.401638566152903" />
+      <entry key="S60" value="6.76077480916857" />
+      <entry key="M2" value="7.176024995466453" />
+      <entry key="M5" value="8.18834433204859" />
+      <entry key="M10" value="9.57839784127226" />
+      <entry key="M15" value="11.257219818674129" />
+      <entry key="M30" value="19.260807152947603" />
+      <entry key="H1" value="40.27059954812172" />
+      <entry key="H2" value="76.1860962897086" />
+      <entry key="H4" value="114.75739275958266" />
+      <entry key="D1" value="169.36215109499202" />
+      <entry key="W1" value="181.81563570150905" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3IynQTLdbHiaoqY7As1SqYxcb3c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.PruebaCrearPlato.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6af02dd2-0f5a-40bf-9dab-4f60d89b2d45" name="Changes" comment="" />
+      <created>1788745663342</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788745663342</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

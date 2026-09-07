@@ -87,6 +87,7 @@ public class RegistroPropietario {
             return email;
         }
     }
+
     //Validacion para Telefono
     private String readPhone(String s) {
         while (true) {

@@ -6,12 +6,12 @@ public class Restaurante {
     private String direccion;
     private String telefono;
     private String urlLogo;
-    private Long idPropietario;
+    private String idPropietario;
 
     public Restaurante() {
     }
 
-    public Restaurante(String nombre, String nit, String direccion, String telefono, String urlLogo, Long idPropietario) {
+    public Restaurante(String nombre, String nit, String direccion, String telefono, String urlLogo, String idPropietario) {
         this.nombre = nombre;
         this.nit = nit;
         this.direccion = direccion;
@@ -35,6 +35,6 @@ public class Restaurante {
     public String getUrlLogo() { return urlLogo; }
     public void setUrlLogo(String urlLogo) { this.urlLogo = urlLogo; }
 
-    public Long getIdPropietario() { return idPropietario; }
-    public void setIdPropietario(Long idPropietario) { this.idPropietario = idPropietario; }
+    public String getIdPropietario() { return idPropietario; }
+    public void setIdPropietario(String idPropietario) { this.idPropietario = idPropietario; }
 }

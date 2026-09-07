@@ -7,17 +7,17 @@ public class CrearPlato {
     private String descripcion;
     private String urlImagen;
     private String categoria;
-    private Long idRestaurante;
+    private String nitRestaurante;
     private Boolean activo;
 
-    public CrearPlato(Long id, String nombre, Integer precio, String descripcion, String urlImagen, String categoria, Long idRestaurante) {
+    public CrearPlato(Long id, String nombre, Integer precio, String descripcion, String urlImagen, String categoria, String nitRestaurante) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
         this.urlImagen = urlImagen;
         this.categoria = categoria;
-        this.idRestaurante = idRestaurante;
+        this.nitRestaurante = nitRestaurante;
         this.activo = true;
     }
 
@@ -45,8 +45,8 @@ public class CrearPlato {
         return categoria;
     }
 
-    public Long getIdRestaurante() {
-        return idRestaurante;
+    public String getnitRestaurante() {
+        return nitRestaurante;
     }
 
     public Boolean getActivo() {
@@ -77,8 +77,8 @@ public class CrearPlato {
         this.categoria = categoria;
     }
 
-    public void setIdRestaurante(Long idRestaurante) {
-        this.idRestaurante = idRestaurante;
+    public void setnitRestaurante(String nitRestaurante) {
+        this.nitRestaurante = nitRestaurante;
     }
 
     public void setActivo(Boolean activo) {
@@ -94,7 +94,7 @@ public class CrearPlato {
                 ", descripcion='" + descripcion + '\'' +
                 ", urlImagen='" + urlImagen + '\'' +
                 ", categoria='" + categoria + '\'' +
-                ", idRestaurante=" + idRestaurante +
+                ", idRestaurante=" + nitRestaurante +
                 ", activo=" + activo +
                 '}';
     }       /**
@@ -102,11 +102,11 @@ public class CrearPlato {
      *
      * @param nuevoPrecio   Nuevo precio a asignar.
      * @param nuevaDescripcion  Nueva descripción a asignar.
-     * @param idRestauranteUsuario ID del restaurante del usuario que intenta realizar la modificación.
+     * @param nitRestauranteUsuario ID del restaurante del usuario que intenta realizar la modificación.
      * @throws IllegalArgumentException Si el ID del restaurante no coincide con el del plato.
      */
-    public void modificarPlato(Integer nuevoPrecio, String nuevaDescripcion, Long idRestauranteUsuario) {
-        if (!this.idRestaurante.equals(idRestauranteUsuario)) {
+    public void modificarPlato(Integer nuevoPrecio, String nuevaDescripcion, String nitRestauranteUsuario) {
+        if (!this.nitRestaurante.equals(nitRestauranteUsuario)) {
             throw new IllegalArgumentException("No tienes permiso para modificar un plato de otro restaurante.");
         }
 

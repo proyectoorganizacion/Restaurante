@@ -35,19 +35,29 @@ public class RestauranteService {
         }
 
         // 3). NIT unicamente numerico
+        if (restaurante.getNit().isBlank()) {
+            throw new IllegalArgumentException("Nit is required");
+        }
+
         if (!restaurante.getNit().matches("^[0-9]+$")) {
             throw new Exception("El campo NIT debe ser únicamente numérico.");
         }
 
+
         // 4). Telefono: unicamente numeros, maximo 13 caracteres, puede tener '+' al inicio
+        if (restaurante.getTelefono().isBlank()) {
+            throw new IllegalArgumentException("Se requiere el telefono");
+        }
+
         if (!restaurante.getTelefono().matches("^\\+?[0-9]+$")) {
             throw new Exception("El campo Teléfono solo debe contener números y opcionalmente el símbolo '+' al inicio.");
         }
+
         if (restaurante.getTelefono().length() > 13) {
             throw new Exception("El campo Teléfono debe contener un máximo de 13 caracteres.");
         }
 
-        // 5). Nombre puede contener numeros, pero unicamente numeros
+        // 5). Nombre puede contener numeros, pero no unicamente numeros
         if (restaurante.getNombre().matches("^[0-9]+$")) {
             throw new Exception("El nombre del restaurante no puede estar compuesto únicamente por números.");
         }

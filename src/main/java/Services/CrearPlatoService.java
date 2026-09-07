@@ -10,7 +10,7 @@ public class CrearPlatoService {
         this.crearPlatoRepository = crearPlatoRepository;
     }
 
-    public CrearPlato crearPlato(String rolUsuario, Long id, String nombre, Integer precio, String descripcion, String urlImagen, String categoria, Long idRestaurante) {
+    public CrearPlato crearPlato(String rolUsuario, Long id, String nombre, Integer precio, String descripcion, String urlImagen, String categoria, String nitRestaurante) {
 
         if (!"PROPIETARIO".equalsIgnoreCase(rolUsuario)) {
             throw new IllegalArgumentException("Solo el propietario del restaurante puede crear platos.");
@@ -27,22 +27,33 @@ public class CrearPlatoService {
             throw new IllegalArgumentException("El precio debe ser un número entero positivo mayor a 0.");
         }
 
-        if (idRestaurante == null) {
+        if (nitRestaurante == null || nitRestaurante.trim().isEmpty()) {
             throw new IllegalArgumentException("Todo plato debe estar asociado a un restaurante.");
         }
 
-        CrearPlato nuevoPlato = new CrearPlato(id, nombre, precio, descripcion, urlImagen, categoria, idRestaurante);
+        CrearPlato nuevoPlato = new CrearPlato(id, nombre, precio, descripcion, urlImagen, categoria, nitRestaurante);
 
         crearPlatoRepository.guardar(nuevoPlato);
 
         return nuevoPlato;
     }
 //    modificarPlaro
-public void modificarPlato(Long idPlato, Integer nuevoPrecio, String nuevaDescripcion, Long idRestauranteUsuario) throws Exception {
-    CrearPlato plato = crearPlatoRepository.buscarPorId(idPlato)
-            .orElseThrow(() -> new Exception("El plato con ID " + idPlato + " no existe."));
+public CrearPlato modificarPlato(
+        Long idPlato,
+        Integer nuevoPrecio,
+        String nuevaDescripcion,
+        String nitRestauranteUsuario) throws Exception {
 
-    // Llama al método que definimos previamente en la entidad CrearPlato
-    plato.modificarPlato(nuevoPrecio, nuevaDescripcion, idRestauranteUsuario);
+    CrearPlato plato = crearPlatoRepository.buscarPorId(idPlato)
+            .orElseThrow(() ->
+                    new Exception("El plato con ID " + idPlato + " no existe.")
+            );
+
+    plato.modificarPlato(
+            nuevoPrecio,
+            nuevaDescripcion,
+            nitRestauranteUsuario);
+
+    return plato;
 }
 }
